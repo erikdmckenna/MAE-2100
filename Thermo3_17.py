@@ -10,11 +10,21 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 
-# to print out all the fluid substances available in CoolProp database:
-print(CP.FluidsList())
-
 fluid = 'Ammonia'
 
+# part a
 T1 = 293.15 # K
-D1 = CP.PropsSI('D', )
-T2 = 313.15 # hi
+D1 = CP.PropsSI('D', 'T', T1, 'Q', 1, fluid )
+T2 = 313.15 # K
+v1 = 1/D1
+P2 = CP.PropsSI('P', 'T', T2, 'D', 1/v1, fluid)
+print(P2)
+
+# part b
+
+T1 = 294.3 # K
+D1 = CP.PropsSI('D', 'T', T1, 'Q', 1, fluid )
+T2 = 322 # K
+v1 = 1/D1
+P2 = CP.PropsSI('P', 'T', T2, 'D', 1/v1, fluid)
+print(P2)
