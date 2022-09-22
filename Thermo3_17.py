@@ -17,4 +17,4 @@ fluid = 'Ammonia'
 
 T1 = 293.15 # K
 D1 = CP.PropsSI('D', )
-T2 = 313.15 # K
+T2 = 313.15 # hi
